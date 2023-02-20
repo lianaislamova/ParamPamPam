@@ -1,0 +1,179 @@
+
+@font-face {
+    font-family: Pangolin;
+    /* Имя шрифта */
+    src: url(../fonts/Pangolin/Pangolin-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+.container-div {
+    background-image: url(../img/fone.png);
+    
+}
+
+.logo {
+    height: 60px;
+}
+
+.photo {
+    background: url(../img/photo.png) no-repeat;
+    background-size: 100%;
+    height: 50em;
+}
+
+.info {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    font-family: Pangolin;
+}
+
+.vert-line:before {
+    content: " ";
+    background: #062E40;
+    width: 1px;
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+}
+
+.fot a {
+    text-decoration: none;
+}
+
+.footer {
+    text-align: end;
+}
+
+
+.carousel-inner h5 {
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+#about {
+    text-align: center;
+    height: 600px;
+    font-size: 1.4vw;
+}
+
+.btn {
+	display: inline-block;	
+	box-sizing: border-box;
+	padding: 0 20px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;  
+	border-radius: 6px;
+	height: 40px;
+    width: 100%;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #385898;
+	background-color: #CEEDDF !important;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 2px #666;
+}
+.btn:hover {
+	background-color: #aaeacd !important;
+}
+.btn:active {
+	transform: scale(0.96);
+}
+.btn:disabled {
+	pointer-events: none;
+	opacity: 0.65;
+}
